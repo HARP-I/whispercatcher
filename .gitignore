@@ -14,3 +14,4 @@ archive
 .venv
 .python-version
 manual
+src/hookscript/origin.js

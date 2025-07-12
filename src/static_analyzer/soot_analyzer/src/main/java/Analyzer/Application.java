@@ -66,7 +66,7 @@ public class Application {
             ApkTrafficKeywordsInfo apkTrafficKeywordsInfo = FileIOUtils.getApkTrafficKeywordsFromJson(input);
             // all traffic flows of one apk
             for (TrafficInfo trafficInfo : apkTrafficKeywordsInfo.getFlows()) {
-                EncryptionAnalysisProcessor encryptionAnalysisProcessor = new EncryptionAnalysisProcessor(apkTrafficKeywordsInfo.getPkgName(), trafficInfo); // 对每条流量进行分析
+                EncryptionAnalysisProcessor encryptionAnalysisProcessor = new EncryptionAnalysisProcessor(apkTrafficKeywordsInfo.getPkgName(), trafficInfo); // for each traffic
                 encryptionAnalysisProcessor.encryptionAnalysis();
                 resultCallChains.add(encryptionAnalysisProcessor.getTopWeightResultCell(chainsLimit));
             }
