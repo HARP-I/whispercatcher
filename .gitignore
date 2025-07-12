@@ -1,0 +1,16 @@
+.idea
+.vscode
+**/__pycache__/
+logs/**
+results
+apks/**
+sootOutput
+**/node_modules/
+output/**
+output*
+**/out
+archive
+**/target
+.venv
+.python-version
+manual
