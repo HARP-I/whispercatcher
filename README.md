@@ -12,7 +12,7 @@ WhisperCatcher employs the following four-stage pipeline.
 
 - Raw Traffic Capturing
   - capture the raw traffic generated during the app's startup phase, before the user consents to the privacy policy
-  - plaintext traffic/https-encrypted traffic will be used for identifying unauthorized private data transmissions
+  - plaintext traffic/https-encrypted traffic will be directly used for identifying unauthorized private data transmissions
   - app-encrypted traffic will be further analyzed
 - Traffic Semantics Analysis
   - extract semantic keywords from the captured traffic
