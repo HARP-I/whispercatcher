@@ -27,11 +27,11 @@ WhisperCatcher employs the following four-stage pipeline.
 
 ### Capabilities for Data Transmission Detection
 
-![data-transmission-detection-capabilities](imgs/data-transmission-detection-capabilities.png)
+<img src="imgs/data-transmission-detection-capabilities.png" width="50%"/>
 
 ### Effectiveness
 
-![effectiveness](imgs/effectiveness.png)
+<img src="imgs/effectiveness.png" width="50%"/>
 
 ## Installation & Setup
 
