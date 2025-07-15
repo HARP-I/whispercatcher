@@ -4,13 +4,11 @@
 
 WhisperCatcher is an automated tool designed for detecting unauthorized and encrypted private data transmission behaviors in Android applications.  By integrating network traffic semantic guided static code analysis, dynamic instrumentation, and llm-based private data extraction, WhisperCatcher can effectively identify private data transmissions before the user consents to the privacy policy, and significantly outperforming existing approaches.
 
-<div align="center">
-    <img src="imgs/overview.png" width="80%"/>
-</div>
+![overview](imgs/overview.png)
 
 ## Methodology
 
-WhisperCatcher employs the following three-stage pipeline.
+WhisperCatcher employs the following four-stage pipeline.
 
 - Raw Traffic Capturing
   - capture the raw traffic generated during the app's startup phase, before the user consents to the privacy policy
@@ -29,15 +27,12 @@ WhisperCatcher employs the following three-stage pipeline.
 
 ### Capabilities for Data Transmission Detection
 
-<div align="center">
-    <img src="imgs/data-transmission-detection-capabilities.png" width="50%"/>
-</div>
+![data-transmission-detection-capabilities](imgs/data-transmission-detection-capabilities.png)
 
 ### Effectiveness
 
-<div align="center">
-    <img src="imgs/effectiveness.png" width="50%"/>
-</div>
+![effectiveness](imgs/effectiveness.png)
+
 ## Installation & Setup
 
 ### Prerequisites
