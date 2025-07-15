@@ -19,7 +19,7 @@ from loguru import logger
 from loguru._defaults import LOGURU_FORMAT
 from utils import map_traffic_entry_with_api_instrumentation
 
-frida_path = "/data/local/tmp/fs16.1.5arm64"
+frida_path = "/data/local/tmp/fs16.1.5arm64"  # frida path on the Android device
 timestamp = time.strftime("%Y-%m-%d_%H_%M_%S", time.localtime())  # for logger
 
 if __name__ == "__main__":
@@ -49,7 +49,7 @@ if __name__ == "__main__":
     # files are written to soot_analyze_output_dir & key_apis_output_dir
     # default: output/soot_analyze/pkgname-apkname-soot-apis.json & output/key_apis/pkgname-apkname-key-apis.json
 
-    # hook analyzer: instrument and extract data
+    # hook analyzer: instrument and extract data (recommended: turn off your Android device's proxy before instrumentation)
     logger.remove()  # remove default logger, for creating recorders
     hook_logger_config = {
         "bind_name": "hook_analyze",
@@ -90,3 +90,4 @@ if __name__ == "__main__":
         f"{log_path}/privacy_analyze_{timestamp}.log", encoding="utf-8", enqueue=True, filter=lambda msg: msg["extra"].get("name") == "privacy_analyze"
     )
     privacy_analyzer(hook_output_dir, llm_privacy_extraction_output_dir, privacy_analyze_logger)
+    # default: output/llm_privacy_extraction_output/pkgname-trafficid-privacy_analysis.json
