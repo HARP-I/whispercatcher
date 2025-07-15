@@ -6,6 +6,7 @@ WhisperCatcher is an automated tool designed for detecting unauthorized and encr
 <div align="center">
 <img src="imgs/overview.png" width="80%"/>
 </div>
+
 ## Methodology
 
 WhisperCatcher employs the following four-stage pipeline.
