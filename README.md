@@ -13,7 +13,7 @@ WhisperCatcher is an automated tool designed for detecting unauthorized and encr
 Mobile apps may collect and transmit users' private data before users consent to the privacy policy (unauthorized data transmission, *UDT*), which violates users' privacy rights and breaches existing regulations such as GDPR and PIPL. To obfuscate the transmission of private data, some apps encrypt such data within the app code, making it challenging for existing tools to detect. To address this issue, we design WhisperCatcher, which can effectively detect private data transmitted in plaintext traffic, HTTPS-encrypted traffic and app-encrypted traffic.
 
 <div align="center">
-<img src="imgs/motivating-example.png" width="40%"/>
+<img src="imgs/motivating-example.png" width="50%"/>
 </div>
 
 ## Methodology
