@@ -87,7 +87,10 @@ if __name__ == "__main__":
     # llm privacy analyze: infer transmitted private data
     privacy_analyze_logger = logger.bind(name="privacy_analyze")
     privacy_analyze_logger.add(
-        f"{log_path}/privacy_analyze_{timestamp}.log", encoding="utf-8", enqueue=True, filter=lambda msg: msg["extra"].get("name") == "privacy_analyze"
+        sys.stdout, format=LOGURU_FORMAT, enqueue=True, filter=lambda msg: msg["extra"].get("name") == "privacy_analyze"
+    )
+    privacy_analyze_logger.add(
+        f"{log_path}/privacy_analyze_{timestamp}.log", format=LOGURU_FORMAT, enqueue=True, encoding="utf-8", filter=lambda msg: msg["extra"].get("name") == "privacy_analyze"
     )
     privacy_analyzer(hook_output_dir, llm_privacy_extraction_output_dir, privacy_analyze_logger)
     # default: output/llm_privacy_extraction_output/pkgname-trafficid-privacy_analysis.json

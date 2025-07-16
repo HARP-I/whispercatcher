@@ -136,7 +136,7 @@ function testMethod(method) {
             return ret;
         };
     } catch (e) {
-        console.warn(`[!] Failed hooking ${method.className}.${method.methodName}: ${e.message}`);
+        // console.warn(`[!] Failed hooking ${method.className}.${method.methodName}: ${e.message}`);
     }
 }
 

@@ -3,7 +3,7 @@ import argparse
 import json
 from pathlib import Path
 from .traffic_splitter import process_traffic_entries
-from .category_name_mapping import map_categories
+from .category_name_mapping import map_instances
 from .llm_query import process_single_entry
 
 
@@ -53,9 +53,9 @@ def privacy_analyzer(runtime_record_dir, llm_privacy_extraction_output_dir, logg
             try:
                 result = process_single_entry(entry_data, logger)
 
-                for key in ["detected_categories", "from_plaintext", "from_instrumentation"]:
+                for key in ["privacy_instances", "from_plaintext", "from_instrumentation"]:
                     if key in result:
-                        result[key] = map_categories(result[key])
+                        result[key] = map_instances(result[key])
 
                 save_single_result(result, output_path, logger)
 
@@ -66,7 +66,7 @@ def privacy_analyzer(runtime_record_dir, llm_privacy_extraction_output_dir, logg
                     "package_name": metadata["package_name"],
                     "traffic_id": metadata["traffic_id"],
                     "url": metadata["url"],
-                    "detected_categories": [],
+                    "privacy_instances": [],
                     "from_plaintext": [],
                     "from_instrumentation": [],
                     "error": str(e),

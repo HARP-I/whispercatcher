@@ -400,6 +400,9 @@ def mapping_single_traffic_file_without_instrumentation(traffic_data):
 
 def map_traffic_entry_with_api_instrumentation(filtered_traffic_files_lst, key_apis_files_lst, data_map_files_lst):
     """Traffic entry with related apis"""
+    if len(data_map_files_lst) == 0 or len(data_map_files_lst) == 0:
+        print("[map_traffic_entry_with_api_instrumentation] No data map files or key apis files found, exit.")
+        sys.exit(0)
     data_map_files = [os.path.basename(data_map_file) for data_map_file in data_map_files_lst]
     key_apis_filenames = [os.path.basename(key_apis_file) for key_apis_file in key_apis_files_lst]
     data_map_dir = os.path.dirname(data_map_files_lst[0])

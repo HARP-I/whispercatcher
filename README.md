@@ -3,8 +3,17 @@
 ## Overview
 
 WhisperCatcher is an automated tool designed for detecting unauthorized and encrypted private data transmission behaviors in Android applications.  By integrating network traffic semantic guided static code analysis, dynamic instrumentation, and llm-based private data extraction, WhisperCatcher can effectively identify private data transmissions before the user consents to the privacy policy, and significantly outperforming existing approaches.
+
 <div align="center">
 <img src="imgs/overview.png" width="80%"/>
+</div>
+
+## Motivating Example
+
+Mobile apps may collect and transmit users' private data before users consent to the privacy policy (unauthorized data transmission, *UDT*), which violates users' privacy rights and breaches existing regulations such as GDPR and PIPL. To obfuscate the transmission of private data, some apps encrypt such data within the app code, making it challenging for existing tools to detect. To address this issue, we design WhisperCatcher, which can effectively detect private data transmitted in plaintext traffic, HTTPS-encrypted traffic and app-encrypted traffic.
+
+<div align="center">
+<img src="imgs/motivating-example.png" width="40%"/>
 </div>
 
 ## Methodology
@@ -47,6 +56,7 @@ WhisperCatcher employs the following four-stage pipeline.
 - Android SDK Tools
 - Java JDK (>=8)
 - mitmproxy environment configured
+- Construct the system traffic blacklist (`src/system_traffic_blacklist.txt`)
 
 > **References:**
 > [1] [Mtimproxy Installation](https://docs.mitmproxy.org/stable/overview-installation/)
@@ -71,7 +81,7 @@ pip install -r requirements.txt
 #### Launch
 
 ```bash
-python src/whispercatcher.py
+python src/whispercatcher.py # refer to this file for input & output information
 ```
 
-For more details, please refer to our paper.
+For more details, please refer to the code and our paper.
