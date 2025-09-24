@@ -3,7 +3,7 @@
 **/__pycache__/
 logs/**
 results
-apks/**
+apks/apks_info.json
 sootOutput
 **/node_modules/
 output/**
@@ -17,3 +17,4 @@ manual
 src/hookscript/origin.js
 test/system_traffic_blacklist.txt
 test/config.py
+archive

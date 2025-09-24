@@ -215,19 +215,19 @@ hook list:
 	/* public void setDefaultHostnameVerifier(HostnameVerifier) */
 	HttpsURLConnection.setDefaultHostnameVerifier.implementation = function(hostnameVerifier) {
 		quiet_log("HttpsURLConnection.setDefaultHostnameVerifier invoked");
-		return null;
+		return;
 	};
 	/* libcore/luni/src/main/java/javax/net/ssl/HttpsURLConnection.java */
 	/* public void setSSLSocketFactory(SSLSocketFactory) */
 	HttpsURLConnection.setSSLSocketFactory.implementation = function(SSLSocketFactory) {
 		quiet_log("HttpsURLConnection.setSSLSocketFactory invoked");
-		return null;
+		return;
 	};
 	/* libcore/luni/src/main/java/javax/net/ssl/HttpsURLConnection.java */
 	/* public void setHostnameVerifier(HostnameVerifier) */
 	HttpsURLConnection.setHostnameVerifier.implementation = function(hostnameVerifier) {
 		quiet_log("HttpsURLConnection.setHostnameVerifier invoked");
-		return null;
+		return;
 	};
 
 	/*** Xutils3.x hooks ***/
@@ -253,12 +253,12 @@ hook list:
 		var RequestParams = Java.use('org.xutils.http.RequestParams');
 		RequestParams.setSslSocketFactory.implementation = function(sslSocketFactory) {
 			sslSocketFactory = EmptySSLFactory;
-			return null;
+			return;
 		}
 
 		RequestParams.setHostnameVerifier.implementation = function(hostnameVerifier) {
 			hostnameVerifier = TrustHostnameVerifier.$new();
-			return null;
+			return;
 		}
 
 	} catch (e) {
@@ -270,7 +270,7 @@ hook list:
 		var AbstractVerifier = Java.use("ch.boye.httpclientandroidlib.conn.ssl.AbstractVerifier");
 		AbstractVerifier.verify.overload('java.lang.String', '[Ljava.lang.String', '[Ljava.lang.String', 'boolean').implementation = function() {
 			quiet_log("httpclientandroidlib Hooks");
-			return null;
+			return;
 		}
 	} catch (e) {
 		quiet_log("httpclientandroidlib Hooks not found");
