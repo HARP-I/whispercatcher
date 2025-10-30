@@ -107,6 +107,8 @@ For more details, please refer to the code and our paper.
 
 If you find this project helpful, please consider citing our paper. :)
 
+## Citation
+
 ```text
 @inproceedings{qiu2026whispercatcher,
   title={WhisperCatcher: Demystifying Unauthorized and Encrypted Private Data Transmission in Android Applications},
