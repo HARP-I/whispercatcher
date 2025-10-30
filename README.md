@@ -105,9 +105,9 @@ After completing the environment setup, you can use the samples in `apks` to tes
 
 For more details, please refer to the code and our paper.
 
-If you find this project helpful, please consider citing our paper. :)
-
 ## Citation
+
+If you find this project helpful, please consider citing our paper. :)
 
 ```text
 @inproceedings{qiu2026whispercatcher,
