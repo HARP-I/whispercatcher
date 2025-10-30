@@ -101,7 +101,7 @@ After completing the environment setup, you can use the samples in `apks` to tes
 3. Traffic filtering: system traffic will be filtered using `src/system_traffic_blacklist.txt`, filtered traffic will be recorded in `${output}/traffic_filtered`
 4. Traffic semantics analysis & Transmission functions identification: using traffic semantics to identify transmission-related key functions, call graph will be recorded in `${output}/soot_analyze` and transmission-realted key functions will be recorded in `${output}/key_apis`
 5. Instrumentation: key functions will be instrumented and their runtime information will be recorded in `${output}/hook`
-6. LLM-based private data identification: LLM will be employed to identify private data using network traffic and function runtime information. Any transmitted private data indicates the UDT behavior.
+6. LLM-based private data identification: LLM will be employed to identify private data using traffic and function runtime information. Any transmitted private data indicates the UDT behavior.
 
 For more details, please refer to the code and our paper.
 
