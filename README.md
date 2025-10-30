@@ -51,7 +51,7 @@ WhisperCatcher employs the following four-stage pipeline.
 
 ### Prerequisites
 
-- Python 3.8+ (recommended python version: 3.11)
+- Python 3.11+ (recommended python version: 3.11)
 - Rooted Android device
 - Android SDK Tools
 - Java JDK (>=8)
@@ -66,8 +66,16 @@ WhisperCatcher employs the following four-stage pipeline.
 
 #### Install dependencies
 
+Using `pip`:
+
 ```bash
 pip install -r requirements.txt
+```
+
+or using `uv`:
+
+```bash
+uv sync
 ```
 
 #### Environment setup
@@ -96,3 +104,20 @@ After completing the environment setup, you can use the samples in `apks` to tes
 6. LLM-based private data identification: LLM will be employed to identify private data from traffic and functions runtime information. Any transmitted private data indicates the UDT behavior.
 
 For more details, please refer to the code and our paper.
+
+If you find this project helpful, please consider citing our paper. :)
+
+```text
+@inproceedings{qiu2026whispercatcher,
+  title={WhisperCatcher: Demystifying Unauthorized and Encrypted Private Data Transmission in Android Applications},
+  author={Qiu, Zhaoyu and Fan, Ming and Ma, Bocan and Tang, Yutian and Xue, Lei and Wang, Haijun and Liu, Ting},
+  booktitle={2026 IEEE/ACM 48th International Conference on Software Engineering (ICSE)},
+  pages={},
+  year={2026}
+}
+```
+
+## License
+
+This project is licensed under the GNU Affero General Public License v3.0 (AGPL-3.0).  
+See the [LICENSE](./LICENSE) file for details.

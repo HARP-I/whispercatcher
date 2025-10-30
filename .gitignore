@@ -12,9 +12,9 @@ output*
 archive
 **/target
 .venv
-.python-version
 manual
 src/hookscript/origin.js
 test/system_traffic_blacklist.txt
 test/config.py
 archive
+apks/README.md

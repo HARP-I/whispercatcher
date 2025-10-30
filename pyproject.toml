@@ -1,0 +1,19 @@
+[project]
+name = "whispercatcher"
+version = "0.1.0"
+description = "prototype system of whispercatcher"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "adbutils==2.7.2",
+    "androguard==3.4.0a1",
+    "frida==16.1.5",
+    "loguru==0.7.2",
+    "mitmproxy==10.4.2",
+    "nltk==3.9.1",
+    "openai>=0.27.9",
+    "pandas==2.2.3",
+    "python-magic-bin==0.4.14",
+]
+authors = [{ name = "HARP-I", email = "moyuqianqing13@gmail.com" }]
+license = { file = "LICENSE" }
